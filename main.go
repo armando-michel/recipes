@@ -1,18 +1,10 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/gofiber/fiber/v2"
+	"recipes.com/recipes"
 )
 
 func main() {
-	fmt.Println("Comenzando mi aplicacion de recetas")
-	app := fiber.New()
-
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Hello, World 👋!")
-	})
-
-	app.Listen(":3000")
+	recipes.ConnectDB()
+	recipes.Init(":3000") // <---- default :3000 si no especificar :4000
 }
