@@ -3,6 +3,7 @@ package recipes
 import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
+	"recipes.com/database"
 	"recipes.com/routes"
 )
 
@@ -10,6 +11,7 @@ var recipe = fiber.New()
 
 func ConnectDB() {
 	//  Conectar a la base de datos
+	database.ConnectDb()
 
 }
 

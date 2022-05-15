@@ -60,12 +60,13 @@ func GetUser(c *fiber.Ctx) error {
 /////////////////////////////////////////////////////////////////////////
 func GetAllUser(c *fiber.Ctx) error {
 	user := models.User{}
-
 	users, err := user.FindAllUsers(database.Db)
+
 	if err != nil {
-		return c.Status(400).SendString(err.Error())
+		return c.Status(400).SendString("Error no hay usuarios registrados")
 	}
 	return c.Status(200).JSON(users)
+	// return c.Status(200).SendString("Todos los usuarios")
 }
 
 /////////////////////////////////////////////////////////////////////////
