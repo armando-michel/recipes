@@ -6,5 +6,5 @@ import (
 
 func main() {
 	recipes.ConnectDB()
-	recipes.Init(":3000") // <---- default :3000 si no especificar :4000
+	recipes.Init(":4001") // <---- default :3000 si no especificar :4000
 }

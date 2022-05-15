@@ -11,7 +11,7 @@ import (
 )
 
 var Db *gorm.DB
-var dsn = "root:amichel77@tcp(127.0.0.1:3306)/hospital?charset=utf8mb4&parseTime=True&loc=Local"
+var dsn = "root:amichel77@tcp(127.0.0.1:3306)/recipes?charset=utf8mb4&parseTime=True&loc=Local"
 
 func ConnectDb() {
 	var err error
